@@ -1,2 +1,5 @@
-./backend/Pipfile*
-./backend/instance
+backend/Pipfile.lock
+backend/Pipfile
+backend/instance
+backend/.venv
+
