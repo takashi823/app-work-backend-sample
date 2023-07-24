@@ -6,7 +6,7 @@ export const TopPage = () => {
   return (
     <Box className="TopPage" sx={sx}>
       {/* App.tsxで設定しているTaskPage.tsxのパスをリンクに設定 */}
-      <Link href="/task">
+      <Link href="/tasks">
         <Typography variant="h2">タスク一覧へ</Typography>
       </Link>
     </Box>
