@@ -5,7 +5,9 @@
 ``````
 cd backend
 pipenv shell
-pipenv install flask, flask-sqlalchemy, flask-cors
+pipenv install flask
+pipenv install flask-sqlalchemy
+pipenv install flask-cors
 python3 
 (pythonのインタプリンタが起動する)
 >>> from main import app, db
