@@ -1,3 +1,9 @@
+## アプリの説明
+
+詳細はこちら↓
+https://docs.google.com/presentation/d/10-roIdkKdkC8xS0aRDs7QOlm7C1e5mMe/edit#slide=id.p69
+
+
 ## 環境準備
 
 ターミナルを開いて、下記手順を行ってください。
