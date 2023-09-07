@@ -3,6 +3,7 @@ from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy
 import datetime
 import json
+import os
 
 # Flaskのインスタンスを作成
 app = Flask(__name__)
@@ -46,6 +47,16 @@ def post_task():
         db.session.add(task)
         db.session.commit()
         return redirect("/tasks")
+
+@app.route('/upload', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        file = request.files['file']
+        file.save(os.path.join('./static/image', file.filename))
+        ## DBにはfile名等をを保存しておく
+        return f'{file.filename}がアップロードされました'
+    else:
+        return redirect("/upload_file")
 
 if __name__ == "__main__":
     app.run()
