@@ -52,9 +52,11 @@ def post_task():
 def upload_file():
     if request.method == 'POST':
         file = request.files['file']
+        text_data = request.form.get('text', '')  # デフォルト値として空文字列を使用
+        print(text_data)        
         file.save(os.path.join('./static/image', file.filename))
-        ## DBにはfile名等をを保存しておく
-        return f'{file.filename}がアップロードされました'
+        # DBにはfile名やテキストデータを保存しておく（省略）
+        return f'ファイル：{file.filename} とテキスト：{text_data} がアップロードされました'
     else:
         return redirect("/upload_file")
 
